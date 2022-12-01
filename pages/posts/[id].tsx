@@ -19,7 +19,17 @@ export async function getStaticPaths() {
   
 
   export async function getStaticProps(context: any) {
-    const post = data.posts.find( p => p.id === context.params.id);
+    let post: any = {};
+    post = data.posts.find( p => p.id === context.params.id);
+
+    if (!post){
+      post = {
+        id: '5',
+        date: '2022-12-01',
+        title: 'Bim',
+        content: 'hey ho !'
+      }
+    }
     return {
       props: {
         post
@@ -38,11 +48,11 @@ export default function PostPage({post}: Props) {
             <title>Blog</title>
          </Head>
          <article>
-        <h1 className={utilStyles.headingXl}>{post.title}</h1>
+        <h1 className={utilStyles.headingXl}>{post?.title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={post.date} />
+          <Date dateString={post?.date} />
         </div>
-        <p>{post.content}</p>
+        <p>{post?.content}</p>
       </article>
         </Layout>
       );
