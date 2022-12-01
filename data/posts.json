@@ -1,0 +1,22 @@
+{
+    "posts": [
+        {
+            "id": "1",
+            "date": "2022-12-01",
+            "title": "First post",
+            "content": "Hello how are you ?"
+        },
+        {
+            "id": "2",
+            "date": "2022-12-02",
+            "title": "Second post",
+            "content": "Fine my friend"
+        },
+        {
+            "id": "3",
+            "date": "2022-12-03",
+            "title": "Third post",
+            "content": "The sun is yellow blabla"
+        }
+    ]
+}
