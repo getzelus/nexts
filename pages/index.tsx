@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import data from '../data/posts.json';
-import Date from '../components/date';
+//import Date from '../components/date';
 import { Post } from '../types/Post';
 
 export async function getStaticProps() {
@@ -34,7 +34,7 @@ export default function Home({posts}: Props) {
            <Link href={`/posts/${id}`}>{title}</Link>
            <br />
            <small className={utilStyles.lightText}>
-             <Date dateString={date} />
+             <i>{date}</i>
            </small>
          </li>
           ))}

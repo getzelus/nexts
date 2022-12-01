@@ -2,7 +2,7 @@ import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
 import Head from 'next/head';
 import data from '../../data/posts.json';
-import Date from '../../components/date';
+//import Date from '../../components/date';
 import { Post } from '../../types/Post';
 
 
@@ -50,7 +50,7 @@ export default function PostPage({post}: Props) {
          <article>
         <h1 className={utilStyles.headingXl}>{post?.title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={post?.date} />
+          <i>{post?.date} </i>
         </div>
         <p>{post?.content}</p>
       </article>
