@@ -35,7 +35,7 @@ export default function PostPage({post}: Props) {
     return (
         <Layout>
            <Head>
-            <title>{post.title}</title>
+            <title>Blog</title>
          </Head>
          <article>
         <h1 className={utilStyles.headingXl}>{post.title}</h1>
